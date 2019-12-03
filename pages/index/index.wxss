@@ -1,0 +1,39 @@
+/**index.wxss**/
+.nav {
+	text-align: center;
+}
+.nav .swiper {
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.nav .swiperItem {
+	height: 80rpx;
+	color: #333;
+}
+.nav .swiperItem.actived {
+	color: #f80;
+}
+.videoWrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+.videoWrap .videoBox {
+	box-sizing: border-box;
+	flex-basis: 250rpx;
+	overflow: hidden;
+	background: #fff;
+	padding: 5rpx;
+	margin-bottom: 10rpx;
+}
+.videoWrap .poster {
+	width: 100%;
+	height: 300rpx;
+}
+.videoWrap .videoName {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 0 10rpx;
+}

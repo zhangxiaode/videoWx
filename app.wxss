@@ -1,0 +1,79 @@
+/**app.wxss**/
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {
+  margin: 0;
+  padding: 0
+}
+body,button,input,select,textarea {
+  font: 24rpx / 1.5 tahoma,
+  arial,
+  'Hiragino Sans GB',
+  '\5b8b\4f53',
+  sans - serif
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size: 100%
+}
+address,cite,dfn,em,var {
+  font-style: normal
+}
+code,kbd,pre,samp {
+  font-family: courier new,
+  courier,
+  monospace
+}
+small {
+  font-size: 24rpx
+}
+ol,ul {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+a:hover {
+  text-decoration: underline
+}
+sup {
+  vertical-align: text-top
+}
+sub {
+  vertical-align: text-bottom
+}
+legend {
+  color: #000
+}
+fieldset,img {
+  border: 0
+}
+button,input,select,textarea {
+  font-size: 100%
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+button {
+  border-radius: 0;
+} 
+page {
+  background: #fff;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  font: 24rpx/1.5 tahoma, arial, "Hiragino Sans GB", "Microsoft Yahei",
+    "sans - serif";
+  color: #333;
+}
+.wx_button {
+  width: 700rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ed772f;
+  border-radius: 40rpx;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+}
