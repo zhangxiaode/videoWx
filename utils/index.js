@@ -1,6 +1,6 @@
 // const baseUrl = 'https://test.ixgoo.cn'
 // const wssUrl = 'wss://test.ixgoo.cn'
-const baseUrl = 'http://localhost:9090'
+const baseUrl = 'http://localhost:9000'
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -73,11 +73,7 @@ const request = function ({
       responseType,
       success: (res) => {
         wx.hideLoading();
-        if (res.data.code == 201) {
-          wx.navigateTo({
-            url: "/pages/welcome/index"
-          });
-        } else if (res.data.code == 200) {
+        if (res.data.code == 200) {
           resolve(res.data)
         } else {
           wx.showToast({
