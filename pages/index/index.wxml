@@ -11,7 +11,7 @@
   </view>
   <view class="videoWrap">
     <view class="videoBox" wx:for="{{videos}}" wx:key="index" bindtap="goVideoDetail">
-      <video class="poster" src="{{'http://localhost:80/video' + item.uri}}" enable-danmu danmu-btn controls />
+      <video class="poster" src="{{'http://192.168.5.100' + item.uri}}" show-play-btn show-center-play-btn enable-progress-gesture show-mute-btn vslide-gesture-in-fullscreen controls />
       <view class="videoName">{{item.name}}</view>
     </view>
   </view>
