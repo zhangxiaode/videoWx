@@ -1,6 +1,6 @@
 // const baseUrl = 'https://test.ixgoo.cn'
 // const wssUrl = 'wss://test.ixgoo.cn'
-const baseUrl = 'http://192.168.5.100:9000'
+const baseUrl = 'http://192.168.0.134:9000'
 const formatTime = date => {
     const year = date.getFullYear()
     const month = date.getMonth() + 1
