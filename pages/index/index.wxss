@@ -19,15 +19,15 @@
 }
 .videoWrap .videoBox {
 	box-sizing: border-box;
-	flex-basis: 250rpx;
+	flex-basis: 375rpx;
 	overflow: hidden;
 	background: #fff;
 	padding: 5rpx;
 	margin-bottom: 10rpx;
 }
-.videoWrap .poster {
+.videoWrap .video {
 	width: 100%;
-	height: 300rpx;
+	height: 210rpx;
 }
 .videoWrap .videoName {
 	display: -webkit-box;
