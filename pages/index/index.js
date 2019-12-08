@@ -68,5 +68,8 @@ Page({
             }
         })
     },
+    playVideo(event) {
+        console.log(event)
+    },
     goVideoDetail() {}
 })
