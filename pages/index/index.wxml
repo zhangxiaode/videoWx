@@ -11,7 +11,7 @@
   </view>
   <view class="videoWrap">
     <view class="videoBox" wx:for="{{videos}}" wx:key="index">
-      <video class="video" bindplay="playVideo" data-item="{{item}}" src="{{'http://192.168.0.134' + item.uri}}" title="{{item.name}}" controls />
+      <video class="video" bindplay="playVideo" data-item="{{item}}" poster="/assets/poster.jpg" src="{{'http://192.168.5.100' + item.uri}}" title="{{item.name}}" />
       <view class="videoName">{{item.name}}</view>
     </view>
   </view>
