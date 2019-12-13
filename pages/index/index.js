@@ -26,6 +26,10 @@ Page({
         this.getVideo();
     },
     changeNav(e) {
+        wx.pageScrollTo({
+            scrollTop: 0,
+            duration: 300
+        })
         this.setData({
             pageIndex: 1,
             categoryId: e.currentTarget.dataset.id
@@ -60,10 +64,6 @@ Page({
                 var videos = this.data.videos;
                 if (this.data.pageIndex == 1) {
                     videos = [];
-                    wx.pageScrollTo({
-                        scrollTop: 0,
-                        duration: 300
-                    })
                 }
                 this.setData({
                     videos: [...videos, ...res.data]
