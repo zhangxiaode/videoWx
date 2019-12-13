@@ -1,5 +1,5 @@
 <!-- index.wxml -->
-<view class="index">
+<scroll-view class="index" scroll-y scroll-anchoring scroll-with-animation>
   <view class="nav">
     <swiper class="swiper" displayMultipleItems="{{displayMultipleItems}}">
       <block wx:for="{{nav}}" wx:key="{{index}}">
@@ -11,8 +11,8 @@
   </view>
   <view class="videoWrap">
     <view class="videoBox" wx:for="{{videos}}" wx:key="index">
-      <video class="video" bindplay="playVideo" data-item="{{item}}" poster="/assets/poster.jpg" src="{{'http://192.168.5.100' + item.uri}}" title="{{item.name}}" />
+      <video class="video" data-item="{{item}}" poster="/assets/poster.jpg" src="{{'http://192.168.5.100' + item.uri}}" title="{{item.name}}" />
       <view class="videoName">{{item.name}}</view>
     </view>
   </view>
-</view>
+</scroll-view>

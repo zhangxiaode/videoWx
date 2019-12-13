@@ -1,39 +1,56 @@
 /**index.wxss**/
+
 .nav {
-	text-align: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    height: 80rpx;
+    background: #fff;
 }
+
 .nav .swiper {
-	height: 80rpx;
-	line-height: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
 }
+
 .nav .swiperItem {
-	height: 80rpx;
-	color: #333;
+    height: 80rpx;
+    color: #333;
 }
+
 .nav .swiperItem.actived {
-	color: #f80;
+    color: #f80;
 }
+
 .videoWrap {
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 80rpx;
+    background: #fff;
 }
+
 .videoWrap .videoBox {
-	box-sizing: border-box;
-	flex-basis: 375rpx;
-	overflow: hidden;
-	background: #fff;
-	padding: 5rpx;
-	margin-bottom: 10rpx;
+    box-sizing: border-box;
+    flex-basis: 750rpx;
+    overflow: hidden;
+    background: #fff;
+    padding: 5rpx;
+    margin-bottom: 10rpx;
 }
+
 .videoWrap .video {
-	width: 100%;
-	height: 210rpx;
+    width: 100%;
+    height: 420rpx;
 }
+
 .videoWrap .videoName {
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	padding: 0 10rpx;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 10rpx;
 }

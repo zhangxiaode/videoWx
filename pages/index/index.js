@@ -3,9 +3,9 @@ Page({
     data: {
         displayMultipleItems: 4,
         nav: [],
-        categoryId: 1,
+        categoryId: 2,
         pageIndex: 1,
-        pageSize: 10,
+        pageSize: 3,
         videos: []
     },
     onShow() {
@@ -60,6 +60,10 @@ Page({
                 var videos = this.data.videos;
                 if (this.data.pageIndex == 1) {
                     videos = [];
+                    wx.pageScrollTo({
+                        scrollTop: 0,
+                        duration: 300
+                    })
                 }
                 this.setData({
                     videos: [...videos, ...res.data]
@@ -67,9 +71,5 @@ Page({
                 wx.stopPullDownRefresh();
             }
         })
-    },
-    playVideo(event) {
-        console.log(event)
-    },
-    goVideoDetail() {}
+    }
 })
