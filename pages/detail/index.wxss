@@ -1,0 +1,23 @@
+/**index.wxss**/
+
+.detail {
+    background: #000;
+    height: 100%;
+}
+
+.detail .video {
+    width: 100%;
+    height: 420rpx;
+    position: absolute;
+    top: 50%;
+    margin-top: -210rpx;
+}
+
+.detail .videoName {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 10rpx;
+}

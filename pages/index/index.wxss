@@ -7,8 +7,22 @@
     left: 0;
     right: 0;
     z-index: 9;
-    height: 80rpx;
+    height: 160rpx;
     background: #fff;
+}
+
+.nav .search {
+    height: 80rpx;
+}
+
+.nav .search .searchInput {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80px;
+    text-align: left;
+    padding: 0 20rpx;
+    background: #eee;
 }
 
 .nav .swiper {
@@ -28,7 +42,7 @@
 .videoWrap {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 80rpx;
+    padding-top: 160rpx;
     background: #fff;
 }
 

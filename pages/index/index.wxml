@@ -8,11 +8,14 @@
         </swiper-item>
       </block>
     </swiper>
+    <view class="search">
+      <input class="searchInput" value="{{search}}" placeholder="输入搜索内容" confirm-type="search" bindinput="handleInput" bindconfirm="handleSearch" />
+    </view>
   </view>
   <view class="videoWrap">
-    <view class="videoBox" wx:for="{{videos}}" wx:key="index">
-      <video class="video" data-item="{{item}}" poster="/assets/poster.jpg" src="{{'http://192.168.5.100' + item.uri}}" title="{{item.name}}" />
-      <view class="videoName">{{item.name}}</view>
+    <view class="videoBox" wx:for="{{videos}}" wx:key="index" bindtap="goDetail" data-item="{{item}}">
+      <video class="video" poster="/assets/poster.jpg" src="{{'http://192.168.5.100' + item.uri}}" title="{{item.name}}" controls="{{false}}" />
+      <view class="videoName" catchtap="setCopy" data-name="{{item.name}}">{{item.name}}</view>
     </view>
   </view>
 </scroll-view>
