@@ -35,6 +35,9 @@ Page({
             pageIndex: 1,
             categoryId: e.currentTarget.dataset.id
         })
+        this.setData({
+            search: ""
+        })
         this.getVideo();
     },
     getCategory() {
