@@ -1,5 +1,6 @@
 {
     "navigationBarTitleText": "视频",
+    "navigationBarBackgroundColor": "#000",
     "component": true,
     "enablePullDownRefresh": true,
     "usingComponents": {}

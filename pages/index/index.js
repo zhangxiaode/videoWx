@@ -79,9 +79,12 @@ Page({
     },
     goDetail(event) {
         var item = event.currentTarget.dataset.item;
-        wx.navigateTo({
-            url: `/pages/detail/index?url=http://192.168.5.100${item.uri}&name=${item.name}`
-        })
+        if (item.category_id == 9 || item.category_id == 10) {
+            var url = `/pages/detail/index?url=http://192.168.5.100:9002${item.uri}&name=${item.name}`;
+        } else {
+            var url = `/pages/detail/index?url=http://192.168.5.100:9001${item.uri}&name=${item.name}`
+        }
+        wx.navigateTo({ url })
     },
     setCopy(event) {
         var copyStr = event.currentTarget.dataset.name
