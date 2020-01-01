@@ -3,7 +3,7 @@ Page({
     data: {
         displayMultipleItems: 4,
         nav: [],
-        categoryId: 2,
+        categoryId: 1,
         pageIndex: 1,
         pageSize: 3,
         videos: [],
