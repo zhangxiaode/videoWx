@@ -79,7 +79,7 @@ Page({
     },
     goDetail(event) {
         var item = event.currentTarget.dataset.item;
-        if (item.category_id == 9 || item.category_id == 10) {
+        if (item.category_id == 9 || item.category_id == 10 || item.category_id == 11) {
             var url = `/pages/detail/index?url=http://192.168.5.100:9002${item.uri}&name=${item.name}`;
         } else {
             var url = `/pages/detail/index?url=http://192.168.5.100:9001${item.uri}&name=${item.name}`
