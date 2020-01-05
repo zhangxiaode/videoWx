@@ -9,7 +9,7 @@ Page({
         videos: [],
         search: ""
     },
-    onShow() {
+    onLoad() {
         this.getCategory();
     },
     onPullDownRefresh() {

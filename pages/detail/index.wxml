@@ -1,5 +1,5 @@
 <!-- index.wxml -->
 <view class="detail">
-  <video class="video" poster="/assets/poster.jpg" src="{{url}}" title="{{name}}" />
+  <video class="video" auto-pause-if-navigate auto-pause-if-open-native poster="/assets/poster.jpg" src="{{url}}" title="{{name}}" />
   <view class="videoName">{{item.name}}</view>
 </view>
