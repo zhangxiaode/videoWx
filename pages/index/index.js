@@ -1,13 +1,14 @@
 import { request } from "../../utils/index";
 Page({
     data: {
-        displayMultipleItems: 4,
+        displayMultipleItems: 0,
         nav: [],
+        search: "",
         categoryId: 1,
         pageIndex: 1,
         pageSize: 3,
         videos: [],
-        search: ""
+        controls: false
     },
     onLoad() {
         this.getCategory();
@@ -48,6 +49,7 @@ Page({
         }).then(res => {
             if (res.code == 200) {
                 this.setData({
+                    displayMultipleItems: 4,
                     nav: res.data
                 })
                 this.getVideo();
@@ -99,6 +101,7 @@ Page({
                 self.setData({
                     search: copyStr
                 })
+                self.handleSearch()
             }
         })
     },
@@ -107,7 +110,16 @@ Page({
             search: event.detail.value
         })
     },
+    clearInput() {
+        this.setData({
+            search: ""
+        })
+        this.handleSearch()
+    },
     handleSearch(event) {
+        this.setData({
+            pageIndex: 1
+        })
         request({
             url: `/apis/video`,
             method: "get",

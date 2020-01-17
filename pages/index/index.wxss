@@ -13,16 +13,28 @@
 
 .nav .search {
     height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
 }
 
 .nav .search .searchInput {
     box-sizing: border-box;
-    width: 100%;
+    flex: 1;
     height: 80rpx;
-    line-height: 80px;
+    line-height: 80rpx;
     text-align: left;
     padding: 0 20rpx;
-    background: #eee;
+}
+
+.nav .search .clear {
+    width: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #ccc;
+    font-size: 36rpx;
 }
 
 .nav .swiper {
@@ -53,9 +65,18 @@
     background: #fff;
     padding: 5rpx;
     margin-bottom: 10rpx;
+    position: relative;
 }
 
 .videoWrap .video {
+    width: 100%;
+    height: 420rpx;
+}
+
+.videoWrap .videoBox .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 420rpx;
 }

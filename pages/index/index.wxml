@@ -2,7 +2,7 @@
 <scroll-view class="index" scroll-y scroll-anchoring scroll-with-animation>
   <view class="nav">
     <swiper class="swiper" displayMultipleItems="{{displayMultipleItems}}">
-      <block wx:for="{{nav}}" wx:key="{{index}}">
+      <block wx:for="{{nav}}" wx:key="index">
         <swiper-item class="{{categoryId == item.id ? 'swiperItem actived' : 'swiperItem'}}" data-id="{{item.id}}" bindtap="changeNav">
           {{item.name}}
         </swiper-item>
@@ -10,12 +10,14 @@
     </swiper>
     <view class="search">
       <input class="searchInput" value="{{search}}" placeholder="输入搜索内容" confirm-type="search" bindinput="handleInput" bindconfirm="handleSearch" />
+      <view class="clear" bindtap="clearInput">X</view>
     </view>
   </view>
   <view class="videoWrap">
     <view class="videoBox" wx:for="{{videos}}" wx:key="index" bindtap="goDetail" data-item="{{item}}">
-      <video class="video" auto-pause-if-navigate auto-pause-if-open-native poster="/assets/poster.jpg" src="{{'http://192.168.5.100' + (item.category_id == 9 || item.category_id == 10 || item.category_id == 11 ? ':9002' : ':9001') + item.uri}}" title="{{item.name}}" controls="{{false}}" />
+      <video class="video" auto-pause-if-navigate auto-pause-if-open-native src="{{'http://192.168.5.100' + (item.category_id == 9 || item.category_id == 10 || item.category_id == 11 ? ':9002' : ':9001') + item.uri}}" title="{{item.name}}" controls="{{controls}}" />
       <view class="videoName" catchtap="setCopy" data-name="{{item.name}}">{{item.name}}</view>
+      <view class="mask"></view>
     </view>
   </view>
 </scroll-view>
