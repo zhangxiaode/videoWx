@@ -15,7 +15,7 @@
   </view>
   <view class="videoWrap">
     <view class="videoBox" wx:for="{{videos}}" wx:key="index" bindtap="goDetail" data-item="{{item}}">
-      <video class="video" auto-pause-if-navigate auto-pause-if-open-native src="{{'http://192.168.5.100' + (item.category_id == 9 || item.category_id == 10 || item.category_id == 11 ? ':9002' : ':9001') + item.uri}}" title="{{item.name}}" controls="{{controls}}" />
+      <video class="video" auto-pause-if-navigate auto-pause-if-open-native src="{{'http://192.168.5.100' + (item.category_id == 9 || item.category_id == 10 || item.category_id == 11 ? ':9002' : item.category_id > 11 ? ':9003' : ':9001') + item.uri}}" title="{{item.name}}" controls="{{controls}}" />
       <view class="videoName" catchtap="setCopy" data-name="{{item.name}}">{{item.name}}</view>
       <view class="mask"></view>
     </view>
