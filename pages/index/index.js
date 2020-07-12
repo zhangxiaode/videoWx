@@ -4,7 +4,7 @@ Page({
         displayMultipleItems: 0,
         nav: [],
         search: "",
-        categoryId: 1,
+        categoryId: -1,
         pageIndex: 1,
         pageSize: 3,
         videos: [],
@@ -50,8 +50,12 @@ Page({
             if (res.code == 200) {
                 this.setData({
                     displayMultipleItems: 4,
-                    nav: res.data
+                    nav: [
+                        {id: -1, name: "all"},
+                        ...res.data
+                    ]
                 })
+                console.log(this.data.nav)
                 this.getVideo();
             }
         })

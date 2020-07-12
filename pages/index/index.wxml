@@ -10,7 +10,7 @@
     </swiper>
     <view class="search">
       <input class="searchInput" value="{{search}}" placeholder="输入搜索内容" confirm-type="search" bindinput="handleInput" bindconfirm="handleSearch" />
-      <view class="clear" bindtap="clearInput">X</view>
+      <view class="clear" bindtap="clearInput">×</view>
     </view>
   </view>
   <view class="videoWrap">
